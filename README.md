@@ -18,7 +18,6 @@ Next.js tabanlı koleksiyon yönetim platformu. Kullanıcılar koleksiyonların�
 - NextAuth.js ile kimlik doğrulama
 - Hata mesajları gösterimi
 - Başarılı giriş sonrası koleksiyonlar sayfasına yönlendirme
-- Koyu mod tasarım
 
 ### Koleksiyonlar Sayfası
 - **Grid Görünümü**: 3 sütunlu grid görünümü (responsive)
@@ -28,7 +27,6 @@ Next.js tabanlı koleksiyon yönetim platformu. Kullanıcılar koleksiyonların�
 - Her koleksiyon için özel görsel tasarım
 - Her koleksiyon için "Sabitleri Düzenle" butonu
 - Düzenleme sayfasına yönlendirme (`/collection/:id/edit`)
-- Koyu mod tasarım
 
 ### Koleksiyon Düzenleme Sayfası
 - **Koleksiyon Bilgileri Düzenleme**:
@@ -71,7 +69,6 @@ Next.js tabanlı koleksiyon yönetim platformu. Kullanıcılar koleksiyonların�
   - Vazgeç butonu (koleksiyonlar sayfasına dönüş)
 
 ### Genel Özellikler
-- Koyu mod tasarım (tüm sayfalar)
 - Responsive tasarım
 - Toast bildirimleri
 - Koleksiyonlara özel görsel tasarım (gradient + ikon)
@@ -161,13 +158,6 @@ secilstore/
 ├── next.config.mjs
 └── tailwind.config.js
 ```
-
-## 🎨 Tasarım Özellikleri
-
-### Koyu Mod
-- Tüm sayfalar koyu modda tasarlandı
-- Siyah ve koyu gri tonları kullanıldı
-- Açık renkli metinler ve kontrastlar
 
 ### Koleksiyon Görselleri
 Her koleksiyon için ismine özel görsel tasarım:
