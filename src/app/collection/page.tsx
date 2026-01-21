@@ -53,21 +53,21 @@ export default function CollectionPage() {
     <div className="min-h-screen bg-black">
       <Navbar />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        <div className="w-full space-y-6">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-bold text-white">
+        <div className="w-full space-y-4 sm:space-y-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-6">
+            <div className="flex-shrink-0">
+              <h1 className="text-2xl sm:text-3xl font-bold text-white">
                 Koleksiyonlar
               </h1>
-              <p className="mt-2 text-gray-400">
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base text-gray-400">
                 Hoş geldiniz, {session.user?.name || session.user?.email}!
               </p>
             </div>
-            <div className="flex items-end gap-4">
-              <div className="w-full max-w-md">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-3 sm:gap-4 w-full lg:w-auto">
+              <div className="flex-1 sm:flex-initial sm:w-full sm:max-w-md">
                 <label
                   htmlFor="search"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2"
                 >
                   Koleksiyon Ara
                 </label>
@@ -76,18 +76,18 @@ export default function CollectionPage() {
                   type="text"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Koleksiyon ismi veya açıklama ile ara..."
-                  className="w-full rounded-md border border-gray-700 bg-zinc-800 px-4 py-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Koleksiyon ara..."
+                  className="w-full rounded-md border border-gray-700 bg-zinc-800 px-3 sm:px-4 py-2 text-sm sm:text-base text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="block text-sm font-medium text-gray-300">
+              <div className="flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300">
                   Görünüm
                 </label>
-                <div className="flex rounded-md border border-gray-700 bg-zinc-800 p-1">
+                <div className="flex rounded-md border border-gray-700 bg-zinc-800 p-1 w-fit">
                   <button
                     onClick={() => setViewType("grid")}
-                    className={`p-2 rounded transition-colors ${
+                    className={`p-1.5 sm:p-2 rounded transition-colors ${
                       viewType === "grid"
                         ? "bg-blue-600 text-white"
                         : "text-gray-400 hover:text-white hover:bg-zinc-700"
@@ -95,7 +95,7 @@ export default function CollectionPage() {
                     title="Grid Görünümü"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -110,7 +110,7 @@ export default function CollectionPage() {
                   </button>
                   <button
                     onClick={() => setViewType("list")}
-                    className={`p-2 rounded transition-colors ${
+                    className={`p-1.5 sm:p-2 rounded transition-colors ${
                       viewType === "list"
                         ? "bg-blue-600 text-white"
                         : "text-gray-400 hover:text-white hover:bg-zinc-700"
@@ -118,7 +118,7 @@ export default function CollectionPage() {
                     title="Liste Görünümü"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
